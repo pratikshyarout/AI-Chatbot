@@ -17,27 +17,6 @@ This project implements a modular chatbot application using Python. It supports 
 - **Web App Interface**: Deploy via **Streamlit** (using `streamlit_app.py`).  
 - **Configurable & Extensible**: Easily plug in different LLM or embedder backends.
 
-## 📁 Repository Structure
-
-.
-├── .env # environment variables (e.g. API keys)
-├── app.py # main app / entrypoint
-├── embed.py # embedding & vector management logic
-├── get_vector_db.py # module to initialize/manage vector DB
-├── memory_store.py # persistent conversational memory
-├── media_processing.py # image/audio/text processing utilities
-├── query.py # query / prompt handling logic
-├── evaluation.py # evaluation of generated responses
-├── seed_data.py # initial seed data loader
-├── streamlit_app.py # Streamlit frontend for chat interface
-├── memory_store.json # persisted memory sensor
-├── chat_memory.json # chat history store
-├── requirements.txt # Python dependencies
-└── README.md # this file
-
-markdown
-Copy code
-
 ## 🛠️ Getting Started
 
 ### Prerequisites
@@ -46,39 +25,6 @@ Copy code
 - API keys / credentials (for embedding or language model services)  
 - A vector database or embedding provider (FAISS, Pinecone, etc.)
 
-### Installation
-
-1. Clone the repo:  
-   ```bash
-   git clone https://github.com/pratikshyarout/AI-Chatbot.git
-   cd AI-Chatbot
-Create & activate a virtual environment:
-
-bash
-Copy code
-python -m venv venv
-source venv/bin/activate   # on Linux/macOS
-venv\Scripts\activate      # on Windows
-Install dependencies:
-
-bash
-Copy code
-pip install -r requirements.txt
-Configure environment variables:
-
-Copy .env.example (if exists) or create .env
-
-Add keys like OPENAI_API_KEY, VECTOR_DB_URL, etc.
-
-Usage
-To run the chatbot via Streamlit:
-
-bash
-Copy code
-streamlit run streamlit_app.py
-Access the UI in your browser (usually at http://localhost:8501).
-
-Other modules (e.g. app.py) may also serve as entry points depending on your setup.
 
 📈 How It Works (High Level)
 User sends a message (text, or optionally media).
